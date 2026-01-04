@@ -1,0 +1,15 @@
+[submodule "injector"]
+	path = injector
+	url = git@github.com:dialup-mods/injector.git
+[submodule "sdk-generator"]
+	path = sdk-generator
+	url = git@github.com:dialup-mods/sdk-generator.git
+[submodule "sdk-plugin"]
+	path = sdk-plugin
+	url = git@github.com:dialup-mods/sdk-plugin.git
+[submodule "core"]
+	path = core
+	url = git@github.com:dialup-mods/core.git
+[submodule "docs"]
+	path = docs
+	url = git@github.com:dialup-mods/docs.git
