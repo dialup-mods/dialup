@@ -7,9 +7,15 @@
 [submodule "sdk-plugin"]
 	path = sdk-plugin
 	url = git@github.com:dialup-mods/sdk-plugin.git
-[submodule "core"]
-	path = core
-	url = git@github.com:dialup-mods/core.git
 [submodule "docs"]
 	path = docs
 	url = git@github.com:dialup-mods/docs.git
+[submodule "aim"]
+	path = aim
+	url = git@github.com:dialup-mods/aim.git
+[submodule "core"]
+	path = core
+	url = git@github.com:dialup-mods/core.git
+[submodule "plugins"]
+	path = plugins
+	url = git@github.com:dialup-mods/plugins.git

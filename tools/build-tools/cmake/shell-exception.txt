@@ -1,0 +1,19 @@
+
+😱 This shell doesn't support MSVC environment initialization.
+
+Every one of the eleventy gajillion Microsoft shells is garbo. We get it.
+
+Unfortunately, we can't inject cleanly into Rocket League without compiling with MSVC,
+and we can't compile with MSVC without using one of Microsoft's highly regarded shells.
+
+🛠  Use one of the following instead:
+  👉 cmd
+  👉 powershell
+  👉 pwsh
+  👉 x64 Native Tools Command Prompt for VS 2022
+  👉 VS2022 Developer PowerShell
+  👉 VS2022 Developer Command Prompt
+  👉 Windows Terminal (with a valid shell inside)
+  👉 Build tools prompt from VS Installer
+  💅 WezTerm (with a valid shell inside)
+

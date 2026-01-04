@@ -1,0 +1,10 @@
+@PACKAGE_INIT@
+
+# PreProject not included on purpose - you must call include manually
+include("${CMAKE_CURRENT_LIST_DIR}/GameBinaryDir.cmake")
+include("${CMAKE_CURRENT_LIST_DIR}/SDK.cmake")
+include("${CMAKE_CURRENT_LIST_DIR}/Plugin.cmake")
+include("${CMAKE_CURRENT_LIST_DIR}/PostBuild.cmake")
+include("${CMAKE_CURRENT_LIST_DIR}/PostProject.cmake")
+include("${CMAKE_CURRENT_LIST_DIR}/Tidy.cmake")
+include("${CMAKE_CURRENT_LIST_DIR}/shell-exception.txt")
