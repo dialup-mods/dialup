@@ -12,19 +12,19 @@ Generate clean, type-safe SDKs for Unreal Engine 3 games. Fixes 11-year-old bugs
 
 **We questioned the pattern. You should too.**
 
-**Status:** Released. Docs in progress.
+**Status:** Released.
 
 ### [SDK Plugin](https://github.com/dialup-mods/sdk-plugin)
 Build your generated SDK into a reusable static library for multiple- and cross-plugin use.
 
 No more polluted global namespace.
 
-**Status:** Released. Docs in progress.
+**Status:** Released.
 
 ### [Injector](https://github.com/dialup-mods/injector)
 A simple DLL injector for use in the build system. It's as easy as `make inject`
 
-**Status:** Released. Docs in progress.
+**Status:** Released.
 
 ## 🚧 Under Construction 🚧
 
