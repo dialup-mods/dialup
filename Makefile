@@ -3,24 +3,28 @@ include tools/build-tools/make/shell.mk
 
 EXCEPTION_FILE    := tools/build-tools/shell-exception.txt
 
-.PHONY: check-shell help install configure build clean
+.PHONY: check-shell help install configure build clean install-dev-deps
 
 DIALUP_ROOT := $(LOCALAPPDATA)/DialUp
 
 CMAKE_BUILD_TOOLS_SRC := tools/build-tools
 CMAKE_BUILD_TOOLS_BUILD := $(CMAKE_BUILD_TOOLS_SRC)/build
 
+# Installs dependencies: git, cmake, ninja, clang, etc.
+install-dev-deps:
+	powershell -ExecutionPolicy Bypass -File ./scripts/install_deps.ps1
+
 install-tools: check-shell
 	@bash -lc 'cd core/include/external && git submodule update --init --recursive'
 	@bash -lc 'mkdir -vp "$$LOCALAPPDATA/DialUp/include/v1"'
-	@bash -lc 'mkdir -vp "$$LOCALAPPDATA/DialUp/include/external/fkYAML/include"'
-	@bash -lc 'mkdir -vp "$$LOCALAPPDATA/DialUp/include/external/fmt/include"'
-	@bash -lc 'mkdir -vp "$$LOCALAPPDATA/DialUp/include/external/doctest/include"'
+	@bash -lc 'mkdir -vp "$$LOCALAPPDATA/DialUp/include/external/fkYAML"'
+	@bash -lc 'mkdir -vp "$$LOCALAPPDATA/DialUp/include/external/fmt"'
+	@bash -lc 'mkdir -vp "$$LOCALAPPDATA/DialUp/include/external/doctest"'
 	@bash -lc 'cp -v core/include/v1/*.h "$(LOCALAPPDATA)/DialUp/include/v1"'
 	@bash -lc 'cp -v core/include/DialUpPlugin.h "$(LOCALAPPDATA)/DialUp/include"'
-	@bash -lc 'cp -rv core/include/external/doctest/* "$(DIALUP_ROOT)/include/external/fkYAML/include"'
-	@bash -lc 'cp -rv core/include/external/fkYAML/include/* "$(DIALUP_ROOT)/include/external/fkYAML/include"'
-	@bash -lc 'cp -rv core/include/external/fmt/include/* "$(DIALUP_ROOT)/include/external/fmt/include"'
+	@bash -lc 'cp -rv core/include/external/doctest "$(DIALUP_ROOT)/include/external"'
+	@bash -lc 'cp -rv core/include/external/fkYAML/include/fkYAML "$(DIALUP_ROOT)/include/external"'
+	@bash -lc 'cp -rv core/include/external/fmt/include/fmt "$(DIALUP_ROOT)/include/external"'
 	cmake -S $(CMAKE_BUILD_TOOLS_SRC) -B $(CMAKE_BUILD_TOOLS_BUILD) \
 	  -Wno-dev -DCMAKE_INSTALL_PREFIX="$(DIALUP_ROOT)"
 	cmake --build $(CMAKE_BUILD_TOOLS_BUILD)
