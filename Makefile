@@ -22,7 +22,7 @@ install-tools: check-shell
 	@bash -lc 'mkdir -vp "$$LOCALAPPDATA/DialUp/include/external/doctest"'
 	@bash -lc 'cp -v core/include/v1/*.h "$(LOCALAPPDATA)/DialUp/include/v1"'
 	@bash -lc 'cp -v core/include/DialUpPlugin.h "$(LOCALAPPDATA)/DialUp/include"'
-	@bash -lc 'cp -rv core/include/external/doctest "$(DIALUP_ROOT)/include/external"'
+	@bash -lc 'cp -rv core/include/external/doctest/doctest "$(DIALUP_ROOT)/include/external"'
 	@bash -lc 'cp -rv core/include/external/fkYAML/include/fkYAML "$(DIALUP_ROOT)/include/external"'
 	@bash -lc 'cp -rv core/include/external/fmt/include/fmt "$(DIALUP_ROOT)/include/external"'
 	cmake -S $(CMAKE_BUILD_TOOLS_SRC) -B $(CMAKE_BUILD_TOOLS_BUILD) \
