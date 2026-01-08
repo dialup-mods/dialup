@@ -16,7 +16,7 @@ VCVARS         := C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\V
 
 GENERATOR      := Ninja
 MAKEFLAGS      += --no-print-directory
-INJECTOR       := $(LOCALAPPDATA)/DialUpFramework/bin/DialUpInjector.exe
+INJECTOR       := $(LOCALAPPDATA)/DialUp/bin/DialUpInjector.exe
 
 define run_with_vcvars
 	cmd /C "$(VCVARS)" & $(1)
